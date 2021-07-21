@@ -147,7 +147,6 @@ ENABLE_VENDOR_RIL_SERVICE := true
 
 # Releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_xiaomi
-TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-05-01
