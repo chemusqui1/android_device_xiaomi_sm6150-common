@@ -7,4 +7,11 @@ set_prop(hal_audio_default, vendor_audio_prop)
 
 allow hal_audio_default audio_socket:sock_file rw_file_perms;
 
+allow hal_audio_default vendor_sensors_prop:file getattr;
+allow hal_audio_default vendor_sensors_prop:file open;
+allow hal_audio_default vendor_sensors_prop:file read;
+allow hal_audio_default vendor_sensors_prop:file map;
+
+allow hal_audio_default self:process execmem;
+
 dontaudit hal_audio_default sysfs:dir read;
