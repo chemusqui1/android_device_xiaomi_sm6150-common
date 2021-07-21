@@ -41,6 +41,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.soundtrigger@2.2-impl
 
+# ATRACE_HAL
+PRODUCT_PACKAGES += \
+    android.hardware.atrace@1.0-service
+
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.bluetooth.default \
@@ -90,11 +94,10 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64 \
-    libdng_sdk.vendor
-
-PRODUCT_PACKAGES += \
+    libc++demangle_vendor \
+    libdng_sdk.vendor \
+    libgui_vendor \
+    libxml2 \
     Snap
 
 PRODUCT_COPY_FILES += \
@@ -205,8 +208,10 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
+    libc2dcolorconvert \
     libcodec2_vndk.vendor \
     libcodec2_hidl@1.0.vendor \
+    libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -243,9 +248,16 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS += *
 
+# Perf
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.0.vendor
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.xiaomi-libperfmgr
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/perf/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile0.conf
 
 # QTI
 PRODUCT_PACKAGES += \
@@ -262,6 +274,10 @@ PRODUCT_PACKAGES += \
     libril \
     librilutils \
     librmnetctl
+
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-lite-vendorcompat \
+    libprotobuf-cpp-full-vendorcompat \
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -309,6 +325,9 @@ PRODUCT_COPY_FILES += \
 # Touchscreen
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
+
+PRODUCT_PACKAGES += \
+    libtinyxml2
 
 # Trust HAL
 PRODUCT_PACKAGES += \
