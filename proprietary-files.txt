@@ -368,7 +368,7 @@ vendor/lib64/libqtikeymaster4.so
 
 # Listen
 vendor/lib/libadpcmdec.so
-vendor/lib/librice.so
+vendor/lib/librice.so|30f281ca3307bee5072c7b1eeea743b466af95ac
 vendor/lib/libsmwrapper.so
 
 # Media
