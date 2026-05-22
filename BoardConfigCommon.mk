@@ -128,6 +128,9 @@ ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_xiaomi
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2025-12-01
+
 # Sepolicy
 TARGET_SEPOLICY_DIR := msmsteppe
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
