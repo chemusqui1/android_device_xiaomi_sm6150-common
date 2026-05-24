@@ -4,5 +4,8 @@ type per_boot_file, file_type, data_file_type, core_data_file_type;
 # Torch
 type sysfs_torch, fs_type, sysfs_type;
 
+# Soft light
+type sysfs_camera_softlight, sysfs_type, fs_type;
+
 # Touchpanel
 type sysfs_touchpanel, fs_type, sysfs_type;
